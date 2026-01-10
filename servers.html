@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servidores | DCE GAMING</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;500;700&family=Roboto:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <i class="fa-solid fa-lambda"></i> DCE <span class="highlight">GAMING</span>
+            </div>
+            <nav>
+                <div class="hamburger">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="about.html">Quiénes Somos</a></li>
+                    <li><a href="servers.html" class="active">Servidores</a></li>
+                    <li><a href="projects.html">Proyectos</a></li>
+                    <li><a href="community.html">Comunidad</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container section-padding">
+        <div class="text-center">
+            <h2 class="section-title">Estado de <span class="highlight">Servidores</span></h2>
+        </div>
+
+        <div class="servers-grid">
+            <!-- Server 1 -->
+            <div class="server-card" style="opacity: 0.7;">
+                <div class="server-img">
+                    <i class="fa-solid fa-crosshairs"></i>
+                </div>
+                <div class="server-info">
+                    <h3>HALF-LIFE: DEATHMATCH</h3>
+                    <div class="server-tags">
+                        <span class="tag">FPS</span>
+                        <span class="tag">Classic</span>
+                    </div>
+                    <p style="color: #aaa; font-size: 0.9rem; margin-bottom: 20px;">Mapas legendarios como Crossfire y
+                        Stalkyard. <strong>Aún no disponible.</strong></p>
+                    <a href="#" class="btn btn-small"
+                        style="background: #333; color: #777; border-color: #555; cursor: not-allowed; width: 100%">Próximamente</a>
+                </div>
+            </div>
+
+            <!-- Server 2 -->
+            <div class="server-card" style="opacity: 0.7;">
+                <div class="server-img">
+                    <i class="fa-brands fa-steam"></i>
+                </div>
+                <div class="server-info">
+                    <h3>COUNTER-STRIKE 1.6</h3>
+                    <div class="server-tags">
+                        <span class="tag">Tactical</span>
+                        <span class="tag">Ranked</span>
+                    </div>
+                    <p style="color: #aaa; font-size: 0.9rem; margin-bottom: 20px;">Servidor público con sistema de
+                        rangos. <strong>Aún no disponible.</strong></p>
+                    <a href="#" class="btn btn-small"
+                        style="background: #333; color: #777; border-color: #555; cursor: not-allowed; width: 100%">Próximamente</a>
+                </div>
+            </div>
+
+            <!-- Server 3 -->
+            <div class="server-card">
+                <div class="server-img" style="padding: 0;">
+                    <img src="vanilla.jpg" alt="Minecraft Anarquico"
+                        style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div class="server-info">
+                    <h3>MINECRAFT ANARQUICO</h3>
+                    <div class="server-tags">
+                        <span class="tag">Survival</span>
+                        <span class="tag">Anarchy</span>
+                    </div>
+                    <p style="color: #aaa; font-size: 0.9rem; margin-bottom: 20px;">Mundo survival sin reglas, PVP
+                        habilitado y protecciones mínimas.</p>
+                    <a href="#" class="btn btn-small" style="width: 100%">Ver IP</a>
+                </div>
+            </div>
+
+            <!-- Server 4 (New) -->
+            <div class="server-card">
+                <div class="server-img" style="padding: 0;">
+                    <img src="imagenl4dd2.png" alt="Left 4 Dead 2"
+                        style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div class="server-info">
+                    <h3>LEFT 4 DEAD 2</h3>
+                    <div class="server-tags">
+                        <span class="tag">Co-op</span>
+                        <span class="tag">Versus</span>
+                    </div>
+                    <p style="color: #aaa; font-size: 0.9rem; margin-bottom: 20px;">Modo Competitivo, campañas custom y
+                        servidores de alta velocidad.</p>
+                    <a href="#" class="btn btn-small" style="width: 100%">Conectar</a>
+                </div>
+            </div>
+
+            <!-- Server 5 (New) -->
+            <div class="server-card">
+                <div class="server-img" style="padding: 0;">
+                    <img src="extended.png" alt="Minecraft Vanilla Extended"
+                        style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div class="server-info">
+                    <h3>MINECRAFT VANILLA EXTENDED</h3>
+                    <div class="server-tags">
+                        <span class="tag">Survival</span>
+                        <span class="tag">Mods</span>
+                    </div>
+                    <p style="color: #aaa; font-size: 0.9rem; margin-bottom: 20px;">Experiencia vainilla mejorada con
+                        plugins de calidad de vida y economía.</p>
+                    <a href="#" class="btn btn-small" style="width: 100%">Ver IP</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 DCE Gaming. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
