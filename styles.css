@@ -559,6 +559,44 @@ header {
     box-shadow: 0 0 10px var(--primary-glow);
 }
 
+/* LAUNCHER SECTION STYLES */
+.launcher-trigger {
+    transition: var(--transition);
+    border-bottom: 2px solid transparent;
+    padding-bottom: 2px;
+}
+
+.launcher-trigger:hover {
+    color: #fff !important;
+    text-shadow: 0 0 10px var(--secondary-glow);
+    border-bottom-color: var(--secondary-color);
+    transform: translateX(5px);
+}
+
+.launcher-detail-section {
+    animation: fadeInUp 0.5s ease-out;
+    border: 1px solid rgba(0, 255, 170, 0.2);
+    padding: 40px;
+    background: rgba(0, 20, 15, 0.4);
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+}
+
+.download-btn {
+    min-width: 200px;
+    font-size: 1rem !important;
+    padding: 10px 25px !important;
+}
+
+.launcher-item {
+    transition: var(--transition);
+}
+
+.launcher-item:hover {
+    background: rgba(255, 255, 255, 0.1) !important;
+    transform: scale(1.01);
+}
+
 /* COMMUNITY PAGE */
 .community-split {
     display: grid;

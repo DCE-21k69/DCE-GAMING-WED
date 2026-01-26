@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    
+
     // Mobile Navigation Toggle
     const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.nav-links');
@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     hamburger.addEventListener('click', () => {
         navLinks.classList.toggle('active');
         hamburger.classList.toggle('active');
-        
+
         // Icon change
         const icon = hamburger.querySelector('i');
         if (navLinks.classList.contains('active')) {
@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const slideshowContainer = document.createElement('div');
     slideshowContainer.id = 'bg-slideshow';
-    
+
     // Create image elements
     slideshowImages.forEach((src, index) => {
         const img = document.createElement('img');
@@ -76,11 +76,32 @@ document.addEventListener('DOMContentLoaded', () => {
     // Rotation Logic
     let currentSlide = 0;
     const slides = document.querySelectorAll('.bg-slide');
-    
+
     setInterval(() => {
         slides[currentSlide].classList.remove('active');
         currentSlide = (currentSlide + 1) % slides.length;
         slides[currentSlide].classList.add('active');
     }, 5000); // Change every 5 seconds
+
+    // Minecraft Launcher Toggle
+    const launcherTrigger = document.getElementById('launcher-trigger');
+    const launcherSection = document.getElementById('launcher-section');
+
+    if (launcherTrigger && launcherSection) {
+        launcherTrigger.addEventListener('click', () => {
+            if (launcherSection.style.display === 'none') {
+                launcherSection.style.display = 'block';
+                launcherTrigger.innerHTML = '<i class="fa-solid fa-chevron-up"></i> Ocultar Launcher de Minecraft';
+
+                // Smooth scroll to the section
+                setTimeout(() => {
+                    launcherSection.scrollIntoView({ behavior: 'smooth' });
+                }, 100);
+            } else {
+                launcherSection.style.display = 'none';
+                launcherTrigger.innerHTML = '<i class="fa-solid fa-rocket"></i> Ver Launcher de Minecraft';
+            }
+        });
+    }
 
 });
