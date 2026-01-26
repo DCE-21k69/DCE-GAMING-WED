@@ -162,7 +162,6 @@ body::before {
 }
 
 /* HEADER & NAV */
-/* HEADER & NAV */
 header {
     background: rgba(5, 5, 5, 0.95);
     backdrop-filter: blur(10px);
@@ -810,15 +809,88 @@ footer {
     }
 
     .hero h1 {
-        font-size: 3rem;
+        font-size: 2.8rem;
+        line-height: 1.1;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+        letter-spacing: 2px;
     }
 
     .btn-group {
         flex-direction: column;
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
     }
 
     .about-grid,
     .community-split {
+        grid-template-columns: 1fr !important;
+    }
+
+    .section-title {
+        font-size: 2.2rem;
+        margin-bottom: 2rem;
+    }
+
+    /* PROJECT TIMELINE MOBILE FIX */
+    .project-timeline {
+        margin-left: 10px;
+        padding-left: 25px;
+    }
+
+    .project-card::before {
+        left: -34px;
+        top: 25px;
+    }
+
+    /* LAUNCHER SECTION MOBILE FIX */
+    .launcher-detail-section {
+        padding: 20px 15px;
+        margin-top: 30px;
+    }
+
+    .launcher-item {
+        padding: 15px;
+    }
+
+    .launcher-item>div:first-child {
+        text-align: center;
+        width: 100%;
+    }
+
+    .download-btn {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .project-card h3 {
+        font-size: 1.5rem !important;
+    }
+
+    /* COMMUNITY & SOCIAL MOBILE FIX */
+    .social-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 10px !important;
+    }
+
+    .community-box {
+        padding: 30px 20px;
+    }
+
+    .community-box i {
+        font-size: 3.5rem;
+    }
+
+    /* SERVERS MOBILE FIX */
+    .servers-grid {
         grid-template-columns: 1fr;
+    }
+
+    /* ABOUT MOBILE FIX */
+    .founder-box h2 {
+        font-size: 1.8rem !important;
     }
 }
