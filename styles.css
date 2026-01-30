@@ -599,7 +599,7 @@ header {
 /* COMMUNITY PAGE */
 .community-split {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     gap: 40px;
     min-height: 60vh;
 }
@@ -671,7 +671,7 @@ header {
 /* REDES SOCIALES GRID */
 .social-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(6, 1fr);
     gap: 20px;
     margin-top: 50px;
 }
