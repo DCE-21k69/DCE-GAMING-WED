@@ -5,11 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proyectos | DCE GAMING</title>
+    <meta name="description" content="Laboratorio de desarrollo de DCE Gaming. Launchers, matchmaking, hosting y más proyectos en desarrollo.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;500;700&family=Roboto:wght@300;400;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;500;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 
@@ -19,13 +18,25 @@
 
 <body>
 
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loading-lambda">λ</div>
+        <div class="loading-bar-container">
+            <div class="loading-bar"></div>
+        </div>
+        <p class="loading-text">Cargando DCE Gaming</p>
+    </div>
+
+
+
     <header>
         <div class="container header-content">
-            <div class="logo">
-                <i class="fa-solid fa-lambda"></i> DCE <span class="highlight">GAMING</span>
-            </div>
+            <a href="index.html" class="logo">
+                <div class="logo-icon">λ</div>
+                DCE <span class="highlight">GAMING</span>
+            </a>
             <nav>
-                <div class="hamburger">
+                <div class="hamburger" id="hamburger">
                     <i class="fa-solid fa-bars"></i>
                 </div>
                 <ul class="nav-links">
@@ -39,120 +50,233 @@
         </div>
     </header>
 
-    <main class="container section-padding">
-        <div class="text-center">
-            <h2 class="section-title">Laboratorio de <span class="highlight">Desarrollo</span></h2>
-        </div>
-
-        <div class="project-timeline">
-            <!-- Project 1: Minecraft Propio -->
-            <div class="project-card">
-                <div
-                    style="position: absolute; top: -15px; right: 20px; background: var(--secondary-color); color: #000; padding: 5px 10px; font-weight: bold; font-family: var(--font-heading);">
-                    NUEVO
-                </div>
-                <h3 style="font-family: var(--font-heading); font-size: 1.8rem; margin-bottom: 15px;">MINECRAFT PROPIO
-                </h3>
-                <p>Proyectos personales relacionados con el universo de Minecraft, incluyendo desarrollo de launchers y
-                    configuraciones especiales.</p>
-
-                <div class="launcher-trigger" id="launcher-trigger"
-                    style="margin-top: 15px; cursor: pointer; display: inline-block; color: var(--secondary-color); font-weight: bold;">
-                    <i class="fa-solid fa-rocket"></i> Ver Launcher de Minecraft
-                </div>
-
-                <div style="margin-top: 20px;">
-                    <span class="tag">Minecraft</span>
-                    <span class="tag">Java</span>
-                    <span class="tag">Launcher</span>
-                </div>
-            </div>
-
-            <!-- Project 2 -->
-            <div class="project-card">
-                <div
-                    style="position: absolute; top: -15px; right: 20px; background: var(--secondary-color); color: #000; padding: 5px 10px; font-weight: bold; font-family: var(--font-heading);">
-                    EN CURSO
-                </div>
-                <h3 style="font-family: var(--font-heading); font-size: 1.8rem; margin-bottom: 15px;">SISTEMA
-                    MATCHMAKING L4D2</h3>
-                <p>Plataforma de matchmaking con servidores competitivos de alta calidad para todos los países. Busca
-                    partida y juega al instante.</p>
-                <div style="margin-top: 20px;">
-                    <span class="tag">Web</span>
-                    <span class="tag">L4D2</span>
-                    <span class="tag">Competitivo</span>
-                </div>
-            </div>
-
-            <!-- Project 3 -->
-            <div class="project-card">
-                <div
-                    style="position: absolute; top: -15px; right: 20px; background: #666; color: #fff; padding: 5px 10px; font-weight: bold; font-family: var(--font-heading);">
-                    PLANEACIÓN
-                </div>
-                <h3 style="font-family: var(--font-heading); font-size: 1.8rem; margin-bottom: 15px;">DCE HOSTING:
-                    MINECRAFT</h3>
-                <p>Proveedor de hosting en Latinoamérica y Norteamérica. Servidores de calidad, baratos y con un panel
-                    de control fácil de usar.</p>
-                <div style="margin-top: 20px;">
-                    <span class="tag">Hosting</span>
-                    <span class="tag">Infraestructura</span>
-                </div>
-            </div>
-
-            <!-- Project 4 -->
-            <div class="project-card">
-                <div
-                    style="position: absolute; top: -15px; right: 20px; background: #666; color: #fff; padding: 5px 10px; font-weight: bold; font-family: var(--font-heading);">
-                    PLANEACIÓN
-                </div>
-                <h3 style="font-family: var(--font-heading); font-size: 1.8rem; margin-bottom: 15px;">L4D2 MOD MANAGER
-                </h3>
-                <p>Aplicación intuitiva que crea automáticamente la carpeta de mods visibles para partidas online en
-                    modo Enfrentamiento (Versus).</p>
-                <div style="margin-top: 20px;">
-                    <span class="tag">App</span>
-                    <span class="tag">Herramientas</span>
-                    <span class="tag">Mods</span>
-                </div>
+    <main>
+        <!-- Page Hero Banner -->
+        <div class="page-hero" data-title="LABS">
+            <div class="container">
+                <h1 class="section-title reveal">Laboratorio de <span class="highlight">Desarrollo</span></h1>
+                <p class="reveal" style="color: var(--text-muted); font-size:1.1rem; margin-top:-2rem; letter-spacing:2px;">
+                    Lo que estamos construyendo
+                </p>
             </div>
         </div>
 
-        <!-- Hidden Launcher Section -->
-        <div id="launcher-section" class="launcher-detail-section" style="display: none; margin-top: 50px;">
-            <div class="text-center">
-                <h2 class="section-title">Launchers de <span class="highlight">Minecraft</span></h2>
-            </div>
+        <section class="section-padding">
+            <div class="container">
+                <div class="project-timeline">
 
-            <div class="project-card" style="max-width: 800px; margin: 0 auto;">
-                <h3
-                    style="font-family: var(--font-heading); font-size: 1.5rem; color: var(--secondary-color); margin-bottom: 20px;">
-                    VERSIONES DESCONTINUADAS</h3>
+                    <!-- Project 1: Minecraft Propio -->
+                    <div class="project-card reveal">
+                        <div class="project-badge badge-new">NUEVO</div>
+                        <h3>
+                            <i class="fa-solid fa-cube" style="color:var(--secondary); margin-right:10px;"></i>
+                            Minecraft Propio
+                        </h3>
+                        <p>Proyectos personales relacionados con el universo de Minecraft, incluyendo desarrollo de launchers personalizados y configuraciones especiales para nuestros servidores.</p>
 
-                <div class="launcher-item"
-                    style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 8px; border-left: 4px solid var(--secondary-color);">
-                    <div
-                        style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px;">
-                        <div>
-                            <h4 style="margin: 0; font-family: var(--font-heading);">DCELauncher Jenos Editio Beta 3.1
-                            </h4>
-                            <p style="margin: 5px 0 0; font-size: 0.9rem; color: #aaa;">Versión clásica del launcher con
-                                optimizaciones especiales.</p>
+                        <div class="project-progress">
+                            <div class="progress-label">
+                                <span>Progreso general</span>
+                                <span>75%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill green" data-width="75%"></div>
+                            </div>
                         </div>
-                        <a href="https://github.com/DCE-21k69/DCE-GAMING-WED/releases/download/Launcher/DCELauncher.JS.Setup.3.1.0-beta.exe"
-                            class="btn btn-green download-btn">
-                            <i class="fa-solid fa-download"></i> Descargar v3.1
+
+                        <div class="launcher-trigger" id="launcher-trigger">
+                            <i class="fa-solid fa-rocket"></i> Ver Launcher de Minecraft
+                        </div>
+
+                        <div class="project-tags">
+                            <span class="tag">Minecraft</span>
+                            <span class="tag">Java</span>
+                            <span class="tag">Launcher</span>
+                        </div>
+                    </div>
+
+                    <!-- Project 2: Matchmaking L4D2 -->
+                    <div class="project-card reveal" style="transition-delay:0.1s">
+                        <div class="project-badge badge-active">EN CURSO</div>
+                        <h3>
+                            <i class="fa-solid fa-crosshairs" style="color:var(--primary); margin-right:10px;"></i>
+                            Sistema Matchmaking L4D2
+                        </h3>
+                        <p>Plataforma de matchmaking con servidores competitivos de alta calidad para todos los países. Busca partida y juega al instante con jugadores de tu nivel.</p>
+
+                        <div class="project-progress">
+                            <div class="progress-label">
+                                <span>Progreso general</span>
+                                <span>40%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill orange" data-width="40%"></div>
+                            </div>
+                        </div>
+
+                        <div class="project-tags">
+                            <span class="tag">Web</span>
+                            <span class="tag">L4D2</span>
+                            <span class="tag">Competitivo</span>
+                            <span class="tag">Backend</span>
+                        </div>
+                    </div>
+
+                    <!-- Project 3: DCE Hosting -->
+                    <div class="project-card reveal" style="transition-delay:0.2s">
+                        <div class="project-badge badge-planned">PLANEACIÓN</div>
+                        <h3>
+                            <i class="fa-solid fa-cloud" style="color:#666; margin-right:10px;"></i>
+                            DCE Hosting: Minecraft
+                        </h3>
+                        <p>Proveedor de hosting en Latinoamérica y Norteamérica. Servidores de calidad, precios accesibles y un panel de control fácil de usar para todos los niveles.</p>
+
+                        <div class="project-progress">
+                            <div class="progress-label">
+                                <span>Progreso general</span>
+                                <span>10%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill gray" data-width="10%"></div>
+                            </div>
+                        </div>
+
+                        <div class="project-tags">
+                            <span class="tag">Hosting</span>
+                            <span class="tag">Infraestructura</span>
+                            <span class="tag">SaaS</span>
+                        </div>
+                    </div>
+
+                    <!-- Project 4: L4D2 Mod Manager -->
+                    <div class="project-card reveal" style="transition-delay:0.3s">
+                        <div class="project-badge badge-planned">PLANEACIÓN</div>
+                        <h3>
+                            <i class="fa-solid fa-puzzle-piece" style="color:#666; margin-right:10px;"></i>
+                            L4D2 Mod Manager
+                        </h3>
+                        <p>Aplicación intuitiva que crea automáticamente la carpeta de mods visibles para partidas online en modo Enfrentamiento (Versus). Sin complicaciones.</p>
+
+                        <div class="project-progress">
+                            <div class="progress-label">
+                                <span>Progreso general</span>
+                                <span>5%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill gray" data-width="5%"></div>
+                            </div>
+                        </div>
+
+                        <div class="project-tags">
+                            <span class="tag">App</span>
+                            <span class="tag">Herramientas</span>
+                            <span class="tag">Mods</span>
+                        </div>
+                    </div>
+
+                    <!-- Project 5: DCE Anime Peru -->
+                    <div class="project-card reveal" style="transition-delay:0.4s">
+                        <div class="project-badge badge-live">TERMINADO</div>
+                        <h3>
+                            <i class="fa-solid fa-play" style="color:#00d2ff; margin-right:10px;"></i>
+                            DCE Anime Peru
+                        </h3>
+                        <p>Página para ver anime gratis sin anuncios, sencilla y rápida. Disfruta de tus series favoritas sin interrupciones.</p>
+
+                        <div class="project-progress">
+                            <div class="progress-label">
+                                <span>Progreso general</span>
+                                <span>100%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill green" data-width="100%" style="background: linear-gradient(90deg, #00d2ff, rgba(0,210,255,0.5)); box-shadow: 0 0 8px rgba(0,210,255,0.5);"></div>
+                            </div>
+                        </div>
+
+                        <a href="https://dceanimeperu.netlify.app/" target="_blank" class="launcher-trigger" style="text-decoration:none; border-bottom-color:#00d2ff; color:#00d2ff; margin-top:20px; display:inline-block;">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i> Visitar DCE Anime Peru
                         </a>
+
+                        <div class="project-tags">
+                            <span class="tag">Web</span>
+                            <span class="tag">Anime</span>
+                            <span class="tag">Streaming</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Hidden Launcher Section -->
+                <div id="launcher-section" class="launcher-detail-section reveal" style="display: none;">
+                    <div class="text-center" style="margin-bottom:40px;">
+                        <h2 class="section-title">Launchers de <span class="highlight">Minecraft</span></h2>
+                    </div>
+
+                    <div class="project-card" style="max-width: 800px; margin: 0 auto;">
+                        <h3 style="font-size:1.4rem; color:var(--secondary); margin-bottom:24px;">
+                            <i class="fa-solid fa-archive" style="margin-right:8px;"></i>
+                            Versiones Descontinuadas
+                        </h3>
+                        <div class="launcher-item">
+                            <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;">
+                                <div>
+                                    <h4 style="font-family:var(--font-sub); font-size:1.1rem; margin-bottom:6px;">DCELauncher Jenos Edition Beta 3.1</h4>
+                                    <p style="font-size:0.88rem; color:var(--text-muted); margin:0;">Versión clásica del launcher con optimizaciones especiales.</p>
+                                </div>
+                                <a href="https://github.com/DCE-21k69/DCE-GAMING-WED/releases/download/Launcher/DCELauncher.JS.Setup.3.1.0-beta.exe"
+                                    class="btn btn-green download-btn">
+                                    <i class="fa-solid fa-download"></i> Descargar v3.1
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
+
             </div>
-        </div>
-        </div>
+        </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 DCE Gaming. Todos los derechos reservados.</p>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <div class="logo-icon">λ</div>
+                        DCE <span class="highlight">GAMING</span>
+                    </a>
+                    <p>Comunidad Gaming Internacional desde Latinoamérica para el mundo.</p>
+                    <div class="footer-social">
+                        <a href="https://discord.gg/DmgMpa5Cwp" target="_blank"><i class="fa-brands fa-discord"></i></a>
+                        <a href="https://www.youtube.com/@DCEWorldComunity" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="https://steamcommunity.com/groups/dceworldcomunity" target="_blank"><i class="fa-brands fa-steam"></i></a>
+                        <a href="https://www.twitch.tv/dceworldcomunity" target="_blank"><i class="fa-brands fa-twitch"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Navegación</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="about.html">Quiénes Somos</a></li>
+                        <li><a href="servers.html">Servidores</a></li>
+                        <li><a href="projects.html">Proyectos</a></li>
+                        <li><a href="community.html">Comunidad</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Comunidad</h4>
+                    <ul>
+                        <li><a href="https://discord.gg/DmgMpa5Cwp" target="_blank">Discord</a></li>
+                        <li><a href="https://steamcommunity.com/groups/dceworldcomunity" target="_blank">Steam Group</a></li>
+                        <li><a href="https://chat.whatsapp.com/E5ER1wkQWqUE06KUWgsAXI" target="_blank">WhatsApp</a></li>
+                        <li><a href="https://www.youtube.com/@DCEWorldComunity" target="_blank">YouTube</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; 2024 DCE Gaming. Todos los derechos reservados.</span>
+                <span>Hecho con <span class="footer-lambda">λ</span> por DCE FREEMAN</span>
+            </div>
+        </div>
     </footer>
 
     <script src="script.js"></script>

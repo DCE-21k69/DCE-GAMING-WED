@@ -5,11 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Servidores | DCE GAMING</title>
+    <meta name="description" content="Servidores de Minecraft, Left 4 Dead 2, Counter-Strike y Half-Life de DCE Gaming. Conéctate ahora.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;500;700&family=Roboto:wght@300;400;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;500;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 
@@ -19,13 +18,25 @@
 
 <body>
 
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loading-lambda">λ</div>
+        <div class="loading-bar-container">
+            <div class="loading-bar"></div>
+        </div>
+        <p class="loading-text">Cargando DCE Gaming</p>
+    </div>
+
+
+
     <header>
         <div class="container header-content">
-            <div class="logo">
-                <i class="fa-solid fa-lambda"></i> DCE <span class="highlight">GAMING</span>
-            </div>
+            <a href="index.html" class="logo">
+                <div class="logo-icon">λ</div>
+                DCE <span class="highlight">GAMING</span>
+            </a>
             <nav>
-                <div class="hamburger">
+                <div class="hamburger" id="hamburger">
                     <i class="fa-solid fa-bars"></i>
                 </div>
                 <ul class="nav-links">
@@ -39,149 +50,242 @@
         </div>
     </header>
 
-    <main class="container section-padding">
-        <div class="text-center">
-            <h2 class="section-title">Estado de <span class="highlight">Servidores</span></h2>
-        </div>
-
-        <div class="servers-grid">
-            <!-- Server 1 -->
-            <div class="server-card" style="opacity: 0.7;">
-                <div class="server-img">
-                    <i class="fa-solid fa-crosshairs"></i>
-                </div>
-                <div class="server-info">
-                    <h3>HALF-LIFE: DEATHMATCH</h3>
-                    <div class="server-tags">
-                        <span class="tag">FPS</span>
-                        <span class="tag">Classic</span>
-                    </div>
-                    <p style="color: #aaa; font-size: 0.9rem; margin-bottom: 20px;">Mapas legendarios como Crossfire y
-                        Stalkyard. <strong>Aún no disponible.</strong></p>
-                    <a href="#" class="btn btn-small"
-                        style="background: #333; color: #777; border-color: #555; cursor: not-allowed; width: 100%">Próximamente</a>
-                </div>
-            </div>
-
-            <!-- Server 2 -->
-            <div class="server-card" style="opacity: 0.7;">
-                <div class="server-img">
-                    <i class="fa-brands fa-steam"></i>
-                </div>
-                <div class="server-info">
-                    <h3>COUNTER-STRIKE 1.6</h3>
-                    <div class="server-tags">
-                        <span class="tag">Tactical</span>
-                        <span class="tag">Ranked</span>
-                    </div>
-                    <p style="color: #aaa; font-size: 0.9rem; margin-bottom: 20px;">Servidor público con sistema de
-                        rangos. <strong>Aún no disponible.</strong></p>
-                    <a href="#" class="btn btn-small"
-                        style="background: #333; color: #777; border-color: #555; cursor: not-allowed; width: 100%">Próximamente</a>
-                </div>
-            </div>
-
-            <!-- Server 3 -->
-            <div class="server-card">
-                <div class="server-img" style="padding: 0;">
-                    <img src="vanilla.jpg" alt="Minecraft Anarquico"
-                        style="width: 100%; height: 100%; object-fit: cover;">
-                </div>
-                <div class="server-info">
-                    <h3>MINECRAFT ANARQUICO</h3>
-                    <div class="server-tags">
-                        <span class="tag">Survival</span>
-                        <span class="tag">Anarchy</span>
-                    </div>
-                    <p style="color: #aaa; font-size: 0.9rem; margin-bottom: 20px;">Mundo survival sin reglas, PVP
-                        habilitado y protecciones mínimas.</p>
-                    <a href="#" class="btn btn-small" style="width: 100%">Ver IP</a>
-                </div>
-            </div>
-
-            <!-- Server 4 (New) -->
-            <div class="server-card">
-                <div class="server-img" style="padding: 0;">
-                    <img src="imagenl4dd2.png" alt="Left 4 Dead 2"
-                        style="width: 100%; height: 100%; object-fit: cover;">
-                </div>
-                <div class="server-info">
-                    <h3>LEFT 4 DEAD 2</h3>
-                    <div class="server-tags">
-                        <span class="tag">Co-op</span>
-                        <span class="tag">Versus</span>
-                    </div>
-                    <p style="color: #aaa; font-size: 0.9rem; margin-bottom: 20px;">Modo Competitivo, campañas custom y
-                        servidores de alta velocidad.</p>
-                    <a href="steam://connect/173.240.151.138:9131" class="btn btn-small" style="width: 100%">Conectar</a>
-                </div>
-            </div>
-
-            <!-- Server 5 (New) -->
-            <div class="server-card">
-                <div class="server-img" style="padding: 0;">
-                    <img src="extended.png" alt="Minecraft Vanilla Extended"
-                        style="width: 100%; height: 100%; object-fit: cover;">
-                </div>
-                <div class="server-info">
-                    <h3>MINECRAFT VANILLA EXTENDED</h3>
-                    <div class="server-tags">
-                        <span class="tag">Survival</span>
-                        <span class="tag">Mods</span>
-                    </div>
-                    <p style="color: #aaa; font-size: 0.9rem; margin-bottom: 20px;">Experiencia vainilla mejorada con
-                        plugins de calidad de vida y economía.</p>
-                    <a href="#" class="btn btn-small" style="width: 100%">Ver IP</a>
-                </div>
-            </div>
-
-            <!-- Server 6 (New) -->
-            <div class="server-card">
-                <div class="server-img" style="padding: 0;">
-                    <img src="gamerburrow.png" alt="DR. STONE SURVIVAL"
-                        style="width: 100%; height: 100%; object-fit: cover;">
-                </div>
-                <div class="server-info">
-                    <h3>DR. STONE SURVIVAL</h3>
-                    <div class="server-tags">
-                        <span class="tag">Survival</span>
-                        <span class="tag">Modded</span>
-                        <span class="tag">1.20.1 Forge</span>
-                    </div>
-                    <p style="color: #aaa; font-size: 0.9rem; margin-bottom: 10px;">Servidor temático de supervivencia
-                        inspirado en Dr. Stone con mods y desafíos únicos. <strong>Versión 1.20.1 con Forge.</strong>
-                    </p>
-
-                    <!-- Server IP -->
-                    <div
-                        style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 12px; margin-bottom: 15px;">
-                        <p style="color: #888; font-size: 0.8rem; margin: 0 0 5px 0;">IP del Servidor:</p>
-                        <p
-                            style="color: #00d9ff; font-family: 'Courier New', monospace; font-size: 0.95rem; margin: 0; font-weight: bold;">
-                            veda.hidencloud.com:24589</p>
-                    </div>
-
-                    <!-- Installation Buttons -->
-                    <div style="display: flex; flex-direction: column; gap: 8px;">
-                        <a href="https://drive.google.com/drive/folders/1t19u8GXj1lKPMxCq5pgb3SiI5AjXKrZz?usp=drive_link"
-                            target="_blank" class="btn btn-small"
-                            style="width: 100%; background: #4285f4; border-color: #4285f4;">
-                            <i class="fa-brands fa-google-drive"></i> Instalación Manual
-                        </a>
-                        <!-- Uncomment and add your Modrinth download link below -->
-                        <a href="https://cdn.modrinth.com/data/b8iCMAmj/versions/F2RSTgyl/DR.%20STONE%20SERVER%201.1.0.mrpack"
-                            download class="btn btn-small"
-                            style="width: 100%; background: #1bd96a; border-color: #1bd96a;">
-                            <i class="fa-solid fa-download"></i> Descargar Modpack (Modrinth)
-                        </a>
-                    </div>
-                </div>
+    <main>
+        <!-- Page Hero Banner -->
+        <div class="page-hero" data-title="SERVERS">
+            <div class="container">
+                <h1 class="section-title reveal">Estado de <span class="highlight">Servidores</span></h1>
+                <p class="reveal" style="color: var(--text-muted); font-size:1.1rem; margin-top:-2rem; letter-spacing:2px;">
+                    Conéctate y juega ahora mismo
+                </p>
             </div>
         </div>
+
+        <section class="section-padding">
+            <div class="container">
+                <div class="servers-grid">
+
+                    <!-- Server 1: HL Deathmatch -->
+                    <div class="server-card offline reveal" style="transition-delay:0.05s">
+                        <div class="server-img">
+                            <div class="server-status-badge soon">
+                                <div class="status-dot"></div>
+                                Próximamente
+                            </div>
+                            <i class="fa-solid fa-crosshairs"></i>
+                        </div>
+                        <div class="server-info">
+                            <h3>Half-Life: Deathmatch</h3>
+                            <div class="server-tags">
+                                <span class="tag">FPS</span>
+                                <span class="tag">Classic</span>
+                                <span class="tag">GoldSrc</span>
+                            </div>
+                            <p class="server-desc">Mapas legendarios como Crossfire y Stalkyard. El clásico que nunca muere. <strong style="color:#ffaa00">Aún no disponible.</strong></p>
+                            <div class="server-actions">
+                                <a href="#" class="btn btn-small btn-ghost" style="cursor:not-allowed; opacity:0.5;" aria-disabled="true">
+                                    <i class="fa-solid fa-clock"></i> Próximamente
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Server 2: CS 1.6 -->
+                    <div class="server-card offline reveal" style="transition-delay:0.1s">
+                        <div class="server-img">
+                            <div class="server-status-badge soon">
+                                <div class="status-dot"></div>
+                                Próximamente
+                            </div>
+                            <i class="fa-brands fa-steam"></i>
+                        </div>
+                        <div class="server-info">
+                            <h3>Counter-Strike 1.6</h3>
+                            <div class="server-tags">
+                                <span class="tag">Tactical</span>
+                                <span class="tag">Ranked</span>
+                                <span class="tag">FPS</span>
+                            </div>
+                            <p class="server-desc">Servidor público con sistema de rangos. Competitivo y divertido. <strong style="color:#ffaa00">Aún no disponible.</strong></p>
+                            <div class="server-actions">
+                                <a href="#" class="btn btn-small btn-ghost" style="cursor:not-allowed; opacity:0.5;" aria-disabled="true">
+                                    <i class="fa-solid fa-clock"></i> Próximamente
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Server 3: Minecraft Anarquico -->
+                    <div class="server-card reveal" style="transition-delay:0.15s">
+                        <div class="server-img" style="padding:0;">
+                            <div class="server-status-badge online">
+                                <div class="status-dot"></div>
+                                Online
+                            </div>
+                            <img src="vanilla.jpg" alt="Minecraft Anarquico">
+                        </div>
+                        <div class="server-info">
+                            <h3>Minecraft Anarquico</h3>
+                            <div class="server-tags">
+                                <span class="tag">Survival</span>
+                                <span class="tag">Anarchy</span>
+                                <span class="tag">PVP</span>
+                            </div>
+                            <p class="server-desc">Mundo survival sin reglas, PVP habilitado y protecciones mínimas. ¿Sobrevivirás?</p>
+                            <div class="server-actions">
+                                <a href="#" class="btn btn-small">
+                                    <i class="fa-solid fa-network-wired"></i> Ver IP
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Server 4: Left 4 Dead 2 -->
+                    <div class="server-card reveal" style="transition-delay:0.2s">
+                        <div class="server-img" style="padding:0;">
+                            <div class="server-status-badge online">
+                                <div class="status-dot"></div>
+                                Online
+                            </div>
+                            <img src="imagenl4dd2.png" alt="Left 4 Dead 2">
+                        </div>
+                        <div class="server-info">
+                            <h3>Left 4 Dead 2</h3>
+                            <div class="server-tags">
+                                <span class="tag">Co-op</span>
+                                <span class="tag">Versus</span>
+                                <span class="tag">Competitivo</span>
+                            </div>
+                            <p class="server-desc">Modo Competitivo, campañas custom y servidores de alta velocidad. El mejor L4D2 de la región.</p>
+                            <div class="server-ip-box">
+                                <div>
+                                    <span class="server-ip-label">IP del Servidor</span>
+                                    <span class="server-ip-address" id="l4d2-ip">173.240.151.138:9131</span>
+                                </div>
+                                <button class="copy-ip-btn" data-ip="173.240.151.138:9131" id="copy-l4d2" aria-label="Copiar IP">
+                                    <i class="fa-regular fa-copy"></i> Copiar
+                                </button>
+                            </div>
+                            <div class="server-actions">
+                                <a href="steam://connect/173.240.151.138:9131" class="btn btn-small">
+                                    <i class="fa-brands fa-steam"></i> Conectar via Steam
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Server 5: Minecraft Vanilla Extended -->
+                    <div class="server-card reveal" style="transition-delay:0.25s">
+                        <div class="server-img" style="padding:0;">
+                            <div class="server-status-badge online">
+                                <div class="status-dot"></div>
+                                Online
+                            </div>
+                            <img src="extended.png" alt="Minecraft Vanilla Extended">
+                        </div>
+                        <div class="server-info">
+                            <h3>Minecraft Vanilla Extended</h3>
+                            <div class="server-tags">
+                                <span class="tag">Survival</span>
+                                <span class="tag">Mods</span>
+                                <span class="tag">Economía</span>
+                            </div>
+                            <p class="server-desc">Experiencia vainilla mejorada con plugins de calidad de vida y economía. Lo mejor de ambos mundos.</p>
+                            <div class="server-actions">
+                                <a href="#" class="btn btn-small">
+                                    <i class="fa-solid fa-network-wired"></i> Ver IP
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Server 6: Dr. Stone Survival -->
+                    <div class="server-card reveal" style="transition-delay:0.3s">
+                        <div class="server-img" style="padding:0;">
+                            <div class="server-status-badge online">
+                                <div class="status-dot"></div>
+                                Online
+                            </div>
+                            <img src="gamerburrow.png" alt="DR. STONE SURVIVAL">
+                        </div>
+                        <div class="server-info">
+                            <h3>Dr. Stone Survival</h3>
+                            <div class="server-tags">
+                                <span class="tag">Survival</span>
+                                <span class="tag">Modded</span>
+                                <span class="tag">1.20.1 Forge</span>
+                            </div>
+                            <p class="server-desc">Servidor temático inspirado en Dr. Stone con mods y desafíos únicos. <strong style="color:var(--primary)">Versión 1.20.1 Forge.</strong></p>
+
+                            <div class="server-ip-box">
+                                <div>
+                                    <span class="server-ip-label">IP del Servidor</span>
+                                    <span class="server-ip-address" id="stone-ip">veda.hidencloud.com:24589</span>
+                                </div>
+                                <button class="copy-ip-btn" data-ip="veda.hidencloud.com:24589" id="copy-stone" aria-label="Copiar IP">
+                                    <i class="fa-regular fa-copy"></i> Copiar
+                                </button>
+                            </div>
+
+                            <div class="server-actions">
+                                <a href="https://drive.google.com/drive/folders/1t19u8GXj1lKPMxCq5pgb3SiI5AjXKrZz?usp=drive_link"
+                                    target="_blank" class="btn btn-small btn-ghost">
+                                    <i class="fa-brands fa-google-drive"></i> Instalación Manual
+                                </a>
+                                <a href="https://cdn.modrinth.com/data/b8iCMAmj/versions/F2RSTgyl/DR.%20STONE%20SERVER%201.1.0.mrpack"
+                                    download class="btn btn-small btn-green">
+                                    <i class="fa-solid fa-download"></i> Descargar Modpack (Modrinth)
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 DCE Gaming. Todos los derechos reservados.</p>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <div class="logo-icon">λ</div>
+                        DCE <span class="highlight">GAMING</span>
+                    </a>
+                    <p>Comunidad Gaming Internacional desde Latinoamérica para el mundo.</p>
+                    <div class="footer-social">
+                        <a href="https://discord.gg/DmgMpa5Cwp" target="_blank"><i class="fa-brands fa-discord"></i></a>
+                        <a href="https://www.youtube.com/@DCEWorldComunity" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="https://steamcommunity.com/groups/dceworldcomunity" target="_blank"><i class="fa-brands fa-steam"></i></a>
+                        <a href="https://www.twitch.tv/dceworldcomunity" target="_blank"><i class="fa-brands fa-twitch"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Navegación</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="about.html">Quiénes Somos</a></li>
+                        <li><a href="servers.html">Servidores</a></li>
+                        <li><a href="projects.html">Proyectos</a></li>
+                        <li><a href="community.html">Comunidad</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Comunidad</h4>
+                    <ul>
+                        <li><a href="https://discord.gg/DmgMpa5Cwp" target="_blank">Discord</a></li>
+                        <li><a href="https://steamcommunity.com/groups/dceworldcomunity" target="_blank">Steam Group</a></li>
+                        <li><a href="https://chat.whatsapp.com/E5ER1wkQWqUE06KUWgsAXI" target="_blank">WhatsApp</a></li>
+                        <li><a href="https://www.youtube.com/@DCEWorldComunity" target="_blank">YouTube</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; 2024 DCE Gaming. Todos los derechos reservados.</span>
+                <span>Hecho con <span class="footer-lambda">λ</span> por DCE FREEMAN</span>
+            </div>
+        </div>
     </footer>
 
     <script src="script.js"></script>

@@ -5,11 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiénes Somos | DCE GAMING</title>
+    <meta name="description" content="Conoce al equipo detrás de DCE Gaming. Comunidad gaming liderada por DCE Freeman, especializada en videojuegos, servidores y desarrollo.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;500;700&family=Roboto:wght@300;400;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;500;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 
@@ -19,13 +18,25 @@
 
 <body>
 
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loading-lambda">λ</div>
+        <div class="loading-bar-container">
+            <div class="loading-bar"></div>
+        </div>
+        <p class="loading-text">Cargando DCE Gaming</p>
+    </div>
+
+
+
     <header>
         <div class="container header-content">
-            <div class="logo">
-                <i class="fa-solid fa-lambda"></i> DCE <span class="highlight">GAMING</span>
-            </div>
+            <a href="index.html" class="logo">
+                <div class="logo-icon">λ</div>
+                DCE <span class="highlight">GAMING</span>
+            </a>
             <nav>
-                <div class="hamburger">
+                <div class="hamburger" id="hamburger">
                     <i class="fa-solid fa-bars"></i>
                 </div>
                 <ul class="nav-links">
@@ -39,42 +50,116 @@
         </div>
     </header>
 
-    <main class="container section-padding">
-        <div class="text-center">
-            <h2 class="section-title">DCE <span class="highlight">STUDIOS</span></h2>
+    <main>
+        <!-- Page Hero Banner -->
+        <div class="page-hero" data-title="ABOUT">
+            <div class="container">
+                <h1 class="section-title reveal">DCE <span class="highlight">STUDIOS</span></h1>
+                <p class="reveal" style="color: var(--text-muted); font-size:1.1rem; margin-top:-2rem; letter-spacing:2px;">
+                    El equipo detrás de la experiencia
+                </p>
+            </div>
         </div>
 
-        <div class="about-grid">
-            <div class="about-text">
-                <p>Somos un equipo de desarrollo integral especializado en videojuegos, gestión web, aplicaciones,
-                    despliegue de servidores y administración de redes privadas. Liderados por <strong>DCE</strong>,
-                    combinamos pasión técnica y creativa para ofrecer soluciones robustas.</p>
-                <p>Nos esforzamos día a día para traer el mejor contenido y construir un ecosistema de equidad y
-                    compañerismo, donde la comunidad pueda disfrutar al máximo de nuestros servidores y proyectos.</p>
-                <p>Creemos en la innovación constante, en la calidad del servicio y, por supuesto, en que <em>Half-Life
-                        3</em> saldrá algún día.</p>
-            </div>
+        <section class="section-padding">
+            <div class="container">
+                <div class="about-grid">
+                    <!-- Text Content -->
+                    <div class="about-text reveal-left">
+                        <p>Somos un equipo de desarrollo integral especializado en videojuegos, gestión web, aplicaciones,
+                            despliegue de servidores y administración de redes privadas. Liderados por <strong>DCE</strong>,
+                            combinamos pasión técnica y creativa para ofrecer soluciones robustas.</p>
+                        <p>Nos esforzamos día a día para traer el mejor contenido y construir un ecosistema de equidad y
+                            compañerismo, donde la comunidad pueda disfrutar al máximo de nuestros servidores y proyectos.</p>
+                        <p>Creemos en la innovación constante, en la calidad del servicio y, por supuesto, en que <em>Half-Life
+                            3</em> saldrá algún día.</p>
 
-            <div class="founder-box">
-                <h3 style="font-family: var(--font-heading); color: var(--primary-color); margin-bottom: 10px;">FUNDADOR
-                </h3>
-                <h2 style="font-size: 2.5rem; margin-bottom: 0px;">DCE | FREEMAN</h2>
-                <p
-                    style="font-size: 0.85rem; color: #555; margin-bottom: 10px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px;">
-                    De La Corte Espinoza Lettiori</p>
-                <div style="width: 50px; height: 2px; background: var(--secondary-color); margin-bottom: 20px;"></div>
-                <p style="font-style: italic; color: #888;">"No necesito hablar mucho para liderar. Mis acciones (y mi
-                    palanca) hablan por mí."</p>
-                <div style="margin-top: 20px; font-size: 2rem; color: var(--secondary-color);">
-                    <i class="fa-solid fa-crown"></i> <span
-                        style="margin-left: 15px; color: var(--primary-color); font-weight: bold; font-family: sans-serif; font-size: 2.5rem; line-height: 1;">&#955;</span>
+                        <!-- Values Grid -->
+                        <div class="about-values">
+                            <div class="value-item">
+                                <i class="fa-solid fa-fire-flame-curved"></i>
+                                <h4>Pasión</h4>
+                                <p>Hacemos lo que hacemos porque amamos los videojuegos.</p>
+                            </div>
+                            <div class="value-item">
+                                <i class="fa-solid fa-handshake"></i>
+                                <h4>Comunidad</h4>
+                                <p>La gente es lo primero. Construimos para ellos.</p>
+                            </div>
+                            <div class="value-item">
+                                <i class="fa-solid fa-microchip"></i>
+                                <h4>Innovación</h4>
+                                <p>Siempre probando cosas nuevas y mejorando.</p>
+                            </div>
+                            <div class="value-item">
+                                <i class="fa-solid fa-shield-halved"></i>
+                                <h4>Calidad</h4>
+                                <p>Sin atajos. Hacemos las cosas bien o no las hacemos.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Founder Card -->
+                    <div class="founder-box reveal-right">
+                        <div class="founder-avatar">
+                            <i class="fa-solid fa-user-astronaut" style="color: var(--primary);"></i>
+                        </div>
+                        <p class="founder-role">Fundador &amp; Lead Dev</p>
+                        <h2 class="founder-name">DCE | FREEMAN</h2>
+                        <p class="founder-real-name">De La Corte Espinoza Lettiori</p>
+                        <div class="founder-divider"></div>
+                        <p class="founder-quote">"No necesito hablar mucho para liderar. Mis acciones (y mi palanca) hablan por mí."</p>
+                        <div class="founder-icons">
+                            <i class="fa-solid fa-crown"></i>
+                            <i class="fa-solid fa-lambda"></i>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 DCE Gaming. Todos los derechos reservados.</p>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <div class="logo-icon">λ</div>
+                        DCE <span class="highlight">GAMING</span>
+                    </a>
+                    <p>Comunidad Gaming Internacional desde Latinoamérica para el mundo.</p>
+                    <div class="footer-social">
+                        <a href="https://discord.gg/DmgMpa5Cwp" target="_blank"><i class="fa-brands fa-discord"></i></a>
+                        <a href="https://www.youtube.com/@DCEWorldComunity" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="https://steamcommunity.com/groups/dceworldcomunity" target="_blank"><i class="fa-brands fa-steam"></i></a>
+                        <a href="https://www.twitch.tv/dceworldcomunity" target="_blank"><i class="fa-brands fa-twitch"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Navegación</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="about.html">Quiénes Somos</a></li>
+                        <li><a href="servers.html">Servidores</a></li>
+                        <li><a href="projects.html">Proyectos</a></li>
+                        <li><a href="community.html">Comunidad</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Comunidad</h4>
+                    <ul>
+                        <li><a href="https://discord.gg/DmgMpa5Cwp" target="_blank">Discord</a></li>
+                        <li><a href="https://steamcommunity.com/groups/dceworldcomunity" target="_blank">Steam Group</a></li>
+                        <li><a href="https://chat.whatsapp.com/E5ER1wkQWqUE06KUWgsAXI" target="_blank">WhatsApp</a></li>
+                        <li><a href="https://www.youtube.com/@DCEWorldComunity" target="_blank">YouTube</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; 2024 DCE Gaming. Todos los derechos reservados.</span>
+                <span>Hecho con <span class="footer-lambda">λ</span> por DCE FREEMAN</span>
+            </div>
+        </div>
     </footer>
 
     <script src="script.js"></script>

@@ -4,28 +4,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DCE GAMING | Inicio</title>
+    <title>DCE GAMING | Comunidad Gaming Internacional</title>
+    <meta name="description" content="DCE Gaming — Comunidad Gaming Internacional. Servidores de Minecraft, Left 4 Dead 2 y más. Únete ahora.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;500;700&family=Roboto:wght@300;400;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;500;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8189698219016599"
      crossorigin="anonymous"></script>
 </head>
-    
+
 <body>
+
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loading-lambda">λ</div>
+        <div class="loading-bar-container">
+            <div class="loading-bar"></div>
+        </div>
+        <p class="loading-text">Cargando DCE Gaming</p>
+    </div>
+
+
 
     <header>
         <div class="container header-content">
-            <div class="logo">
-                <i class="fa-solid fa-lambda"></i> DCE <span class="highlight">GAMING</span>
-            </div>
+            <a href="index.html" class="logo">
+                <div class="logo-icon">λ</div>
+                DCE <span class="highlight">GAMING</span>
+            </a>
             <nav>
-                <div class="hamburger">
+                <div class="hamburger" id="hamburger">
                     <i class="fa-solid fa-bars"></i>
                 </div>
                 <ul class="nav-links">
@@ -40,17 +51,155 @@
     </header>
 
     <main>
+
+        <!-- HERO -->
         <section class="hero">
+            <div class="hero-bg"></div>
+            <canvas id="particles-canvas"></canvas>
             <div class="hero-content">
-                <h1>BIENVENIDOS A <br><span class="highlight">DCE GAMING</span></h1>
-                <p class="hero-subtitle">Comunidad Gaming Internacional</p>
+                <p class="hero-eyebrow">⚡ Comunidad Gaming Internacional</p>
+                <h1>
+                    BIENVENIDOS A<br>
+                    <span class="glitch" data-text="DCE GAMING">DCE GAMING</span>
+                </h1>
+                <p class="hero-subtitle">Servidores &nbsp;·&nbsp; Proyectos &nbsp;·&nbsp; Comunidad</p>
                 <div class="btn-group">
-                    <a href="servers.html" class="btn">Explorar Servidores</a>
-                    <a href="community.html" class="btn btn-green">Unirse Ahora</a>
+                    <a href="servers.html" class="btn" id="btn-explorar">
+                        <i class="fa-solid fa-server"></i> Explorar Servidores
+                    </a>
+                    <a href="community.html" class="btn btn-green" id="btn-unirse">
+                        <i class="fa-brands fa-discord"></i> Unirse Ahora
+                    </a>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <span>Scroll</span>
+                <div class="scroll-arrow"></div>
+            </div>
+        </section>
+
+        <!-- STATS -->
+        <section class="stats-section">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item reveal">
+                        <span class="stat-number" data-target="4" data-suffix="+">4+</span>
+                        <p class="stat-label">Servidores Activos</p>
+                    </div>
+                    <div class="stat-item reveal" style="transition-delay:0.1s">
+                        <span class="stat-number" data-target="500" data-suffix="+">500+</span>
+                        <p class="stat-label">Jugadores en la Comunidad</p>
+                    </div>
+                    <div class="stat-item reveal" style="transition-delay:0.2s">
+                        <span class="stat-number" data-target="3" data-suffix="">3</span>
+                        <p class="stat-label">Plataformas Sociales</p>
+                    </div>
+                    <div class="stat-item reveal" style="transition-delay:0.3s">
+                        <span class="stat-number" data-target="4" data-suffix="">4</span>
+                        <p class="stat-label">Proyectos en Desarrollo</p>
+                    </div>
                 </div>
             </div>
         </section>
+
+        <!-- FEATURES -->
+        <section class="features-section">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-title reveal">¿Por qué <span class="highlight">DCE Gaming</span>?</h2>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card reveal" style="transition-delay:0.05s">
+                        <div class="feature-icon">
+                            <i class="fa-solid fa-server"></i>
+                        </div>
+                        <h3>Servidores de Calidad</h3>
+                        <p>Infraestructura dedicada con baja latencia para Latinoamérica y Norteamérica. Siempre online.</p>
+                    </div>
+                    <div class="feature-card reveal" style="transition-delay:0.15s">
+                        <div class="feature-icon">
+                            <i class="fa-solid fa-users"></i>
+                        </div>
+                        <h3>Comunidad Activa</h3>
+                        <p>Miles de jugadores en Discord, WhatsApp y Steam. Partidas organizadas, eventos y mucho más.</p>
+                    </div>
+                    <div class="feature-card reveal" style="transition-delay:0.25s">
+                        <div class="feature-icon">
+                            <i class="fa-solid fa-code"></i>
+                        </div>
+                        <h3>Desarrollo Propio</h3>
+                        <p>Launchers, matchmaking y hosting desarrollados internamente para la mejor experiencia posible.</p>
+                    </div>
+                    <div class="feature-card reveal" style="transition-delay:0.05s">
+                        <div class="feature-icon">
+                            <i class="fa-solid fa-gamepad"></i>
+                        </div>
+                        <h3>Múltiples Juegos</h3>
+                        <p>Minecraft, Left 4 Dead 2, Counter-Strike 1.6 y Half-Life. Variedad para todos los gustos.</p>
+                    </div>
+                    <div class="feature-card reveal" style="transition-delay:0.15s">
+                        <div class="feature-icon">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+                        <h3>Juego Limpio</h3>
+                        <p>Anti-cheat activo y admins comprometidos. Nuestros servidores son un lugar seguro y justo.</p>
+                    </div>
+                    <div class="feature-card reveal" style="transition-delay:0.25s">
+                        <div class="feature-icon">
+                            <i class="fa-solid fa-bolt"></i>
+                        </div>
+                        <h3>Siempre Innovando</h3>
+                        <p>Nuevos proyectos, nuevas features y nuevos servidores constantemente. La comunidad nunca se detiene.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <div class="logo-icon">λ</div>
+                        DCE <span class="highlight">GAMING</span>
+                    </a>
+                    <p>Comunidad Gaming Internacional desde Latinoamérica para el mundo. Servidores, proyectos y mucho más.</p>
+                    <div class="footer-social">
+                        <a href="https://discord.gg/DmgMpa5Cwp" target="_blank" title="Discord"><i class="fa-brands fa-discord"></i></a>
+                        <a href="https://www.youtube.com/@DCEWorldComunity" target="_blank" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="https://steamcommunity.com/groups/dceworldcomunity" target="_blank" title="Steam"><i class="fa-brands fa-steam"></i></a>
+                        <a href="https://www.twitch.tv/dceworldcomunity" target="_blank" title="Twitch"><i class="fa-brands fa-twitch"></i></a>
+                        <a href="https://www.tiktok.com/@dce_w.c" target="_blank" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Navegación</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="about.html">Quiénes Somos</a></li>
+                        <li><a href="servers.html">Servidores</a></li>
+                        <li><a href="projects.html">Proyectos</a></li>
+                        <li><a href="community.html">Comunidad</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Comunidad</h4>
+                    <ul>
+                        <li><a href="https://discord.gg/DmgMpa5Cwp" target="_blank">Discord</a></li>
+                        <li><a href="https://steamcommunity.com/groups/dceworldcomunity" target="_blank">Steam Group</a></li>
+                        <li><a href="https://chat.whatsapp.com/E5ER1wkQWqUE06KUWgsAXI" target="_blank">WhatsApp</a></li>
+                        <li><a href="https://www.youtube.com/@DCEWorldComunity" target="_blank">YouTube</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; 2024 DCE Gaming. Todos los derechos reservados.</span>
+                <span>Hecho con <span class="footer-lambda">λ</span> por DCE FREEMAN</span>
+            </div>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>
