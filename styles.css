@@ -445,6 +445,25 @@ header.scrolled {
     z-index: 0;
 }
 
+.hero-bg::after {
+    content: '';
+    position: absolute;
+    width: 60vw;
+    height: 60vw;
+    background: radial-gradient(circle, rgba(255,170,0,0.15) 0%, transparent 70%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    pointer-events: none;
+    animation: orbPulse 8s infinite alternate ease-in-out;
+}
+
+@keyframes orbPulse {
+    0% { transform: translate(-50%, -50%) scale(1); opacity: 0.5; }
+    100% { transform: translate(-50%, -50%) scale(1.1); opacity: 1; }
+}
+
 #particles-canvas {
     position: absolute;
     inset: 0;
@@ -679,9 +698,9 @@ header.scrolled {
 .feature-card:hover::before { left: 100%; }
 
 .feature-card:hover {
-    border-color: rgba(255,170,0,0.4);
-    transform: translateY(-8px);
-    box-shadow: 0 20px 60px rgba(0,0,0,0.5), 0 0 30px rgba(255,170,0,0.1);
+    border-color: rgba(255,170,0,0.6);
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.7), 0 0 40px rgba(255,170,0,0.2), inset 0 0 20px rgba(255,170,0,0.05);
 }
 
 .feature-icon {
@@ -700,9 +719,11 @@ header.scrolled {
 }
 
 .feature-card:hover .feature-icon {
-    background: rgba(255,170,0,0.15);
+    background: var(--primary);
+    color: #000;
     box-shadow: 0 0 25px var(--primary-glow);
-    transform: scale(1.1);
+    transform: rotate(360deg);
+}
 }
 
 .feature-card h3 {
