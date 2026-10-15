@@ -20,24 +20,44 @@ document.addEventListener('DOMContentLoaded', () => {
     const navLinks  = document.querySelector('.nav-links');
 
     if (hamburger && navLinks) {
-        hamburger.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            hamburger.classList.toggle('active');
+        const toggleMenu = (open) => {
+            const isActive = open !== undefined ? open : !navLinks.classList.contains('active');
+            navLinks.classList.toggle('active', isActive);
+            hamburger.classList.toggle('active', isActive);
+            document.body.classList.toggle('menu-open', isActive);
             const icon = hamburger.querySelector('i');
-            if (navLinks.classList.contains('active')) {
-                icon.classList.replace('fa-bars', 'fa-xmark');
-            } else {
-                icon.classList.replace('fa-xmark', 'fa-bars');
+            if (icon) {
+                if (isActive) {
+                    icon.classList.replace('fa-bars', 'fa-xmark');
+                } else {
+                    icon.classList.replace('fa-xmark', 'fa-bars');
+                }
             }
+        };
+
+        hamburger.addEventListener('click', (e) => {
+            e.stopPropagation();
+            toggleMenu();
         });
 
         document.querySelectorAll('.nav-links a').forEach(link => {
             link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-                const icon = hamburger.querySelector('i');
-                icon.classList.replace('fa-xmark', 'fa-bars');
-                hamburger.classList.remove('active');
+                toggleMenu(false);
             });
+        });
+
+        // Close on click outside
+        document.addEventListener('click', (e) => {
+            if (navLinks.classList.contains('active') && !navLinks.contains(e.target) && !hamburger.contains(e.target)) {
+                toggleMenu(false);
+            }
+        });
+
+        // Close on escape
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && navLinks.classList.contains('active')) {
+                toggleMenu(false);
+            }
         });
     }
 
