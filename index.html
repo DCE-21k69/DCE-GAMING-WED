@@ -9,7 +9,7 @@
     <meta name="description" content="DCE Gaming — Comunidad Gaming Internacional. Servidores de Minecraft, Left 4 Dead 2 y más. Únete ahora.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;500;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@600;700;800;900&family=Outfit:wght@600;700;800;900&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 
@@ -34,20 +34,26 @@
         <div class="container header-content">
             <a href="index.html" class="logo">
                 <div class="logo-icon">λ</div>
-                DCE <span class="highlight">GAMING</span>
+                <span>DCE <span class="highlight">GAMING</span></span>
+                <span class="logo-badge">STUDIOS</span>
             </a>
-            <nav>
-                <div class="hamburger" id="hamburger">
-                    <i class="fa-solid fa-bars"></i>
-                </div>
+            <nav class="nav-center">
                 <ul class="nav-links">
-                    <li><a href="index.html" class="active">Inicio</a></li>
-                    <li><a href="about.html">Quiénes Somos</a></li>
-                    <li><a href="servers.html">Servidores</a></li>
-                    <li><a href="projects.html">Proyectos</a></li>
-                    <li><a href="community.html">Comunidad</a></li>
+                    <li><a href="index.html" class="active"><i class="fa-solid fa-house"></i> Inicio</a></li>
+                    <li><a href="about.html"><i class="fa-solid fa-users-rays"></i> Quiénes Somos</a></li>
+                    <li><a href="servers.html"><i class="fa-solid fa-server"></i> Servidores</a></li>
+                    <li><a href="projects.html"><i class="fa-solid fa-flask"></i> Proyectos</a></li>
+                    <li><a href="community.html"><i class="fa-solid fa-globe"></i> Comunidad</a></li>
                 </ul>
             </nav>
+            <div class="header-actions">
+                <a href="https://discord.gg/DmgMpa5Cwp" target="_blank" rel="noopener" class="nav-discord-btn">
+                    <i class="fa-brands fa-discord"></i> <span>Discord</span>
+                </a>
+                <div class="hamburger" id="hamburger" aria-label="Abrir menú">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
         </div>
     </header>
 
@@ -56,21 +62,39 @@
         <!-- HERO -->
         <section class="hero">
             <div class="hero-bg"></div>
+            <div class="ambient-light ambient-amber"></div>
+            <div class="ambient-light ambient-cyan"></div>
             <canvas id="particles-canvas"></canvas>
             <div class="hero-content">
-                <p class="hero-eyebrow">⚡ Comunidad Gaming Internacional</p>
+                <div class="hero-badge">
+                    <span class="badge-dot"></span> ⚡ ESTUDIO &amp; COMUNIDAD GAMING
+                </div>
                 <h1>
                     BIENVENIDOS A<br>
-                    <span class="glitch" data-text="DCE GAMING">DCE GAMING</span>
+                    <span class="hero-title-gradient">DCE GAMING</span>
                 </h1>
-                <p class="hero-subtitle">Servidores &nbsp;·&nbsp; Proyectos &nbsp;·&nbsp; Comunidad</p>
+                <p class="hero-subtitle">Infraestructura dedicada, desarrollo de software propio y una comunidad internacional unida por los videojuegos.</p>
                 <div class="btn-group">
-                    <a href="servers.html" class="btn" id="btn-explorar">
+                    <a href="servers.html" class="btn btn-primary" id="btn-explorar">
                         <i class="fa-solid fa-server"></i> Explorar Servidores
                     </a>
                     <a href="community.html" class="btn btn-green" id="btn-unirse">
-                        <i class="fa-brands fa-discord"></i> Unirse Ahora
+                        <i class="fa-brands fa-discord"></i> Unirse a la Comunidad
                     </a>
+                    <a href="https://dce-21k69.github.io/DCE-MODLOADER-VERSUS.L4D2-WED-PAGINE/" target="_blank" class="btn btn-versus-pill" title="Ver DCE Mods Loader">
+                        <i class="fa-solid fa-bolt"></i> Versus Suite v2.3.3
+                    </a>
+                </div>
+                <div class="hero-strip">
+                    <div class="hero-strip-item">
+                        <span class="strip-dot green"></span> 4+ Servidores Activos
+                    </div>
+                    <div class="hero-strip-item">
+                        <span class="strip-dot amber"></span> 500+ Miembros Globales
+                    </div>
+                    <div class="hero-strip-item">
+                        <span class="strip-dot cyan"></span> Launchers &amp; Software Propio
+                    </div>
                 </div>
             </div>
             <div class="scroll-indicator">
@@ -196,7 +220,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <span>&copy; 2024 DCE Gaming. Todos los derechos reservados.</span>
+                <span>&copy; 2024 DCE Gamingcopy; 2026 DCE Gaming. Todos los derechos reservados.</span>
                 <span>Hecho con <span class="footer-lambda">λ</span> por DCE FREEMAN</span>
             </div>
         </div>
